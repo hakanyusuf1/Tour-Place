@@ -1,0 +1,46 @@
+@import "../../scss/__variables";
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    .cards{
+        background-color: $cardNavBgColor;
+        margin: 1rem;
+        padding: 1rem ;
+        border-radius:5px ;
+        color: $backgroundColor;
+        position: relative;
+        box-shadow: 3px 3px 5px gray;
+        overflow: hidden;
+        &:hover .card-over{
+            transform: translateY(0);
+        }
+    }
+    title{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    img {
+        width: 500px;
+        height: 350px;
+        object-fit: cover;
+        &:hover {
+                filter: grayscale(100%);
+            }
+    }
+    
+    .card-over {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1.5rem;
+        transform: translateY(100%);
+        background-color: rgba($color: #000000, $alpha: .5);
+        transition: transform .3s ease ;
+        &:hover{
+        }
+    }
+}
+
+
